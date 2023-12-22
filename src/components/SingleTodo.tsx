@@ -5,11 +5,10 @@ import { MdDone } from "react-icons/md";
 
 interface Props {
   item: todo;
-  todos: todo[];
   setTodos: React.Dispatch<React.SetStateAction<todo[]>>;
 }
 
-const SingleTodo = ({ item, todos, setTodos }: Props) => {
+const SingleTodo = ({ item, setTodos }: Props) => {
   const [edit, setEdit] = useState<Boolean>(false);
   const [editTodo, setEditTodo] = useState<string>(item.todo);
   useEffect(() => {
